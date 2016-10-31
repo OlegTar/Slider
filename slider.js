@@ -75,8 +75,8 @@ function Slider (param) {
 	this.listeners['move'] = new Array();
 
 
-	if (param.current_value) {
-		this.value = param.current_value;
+	if (param.init_value) {
+		this.value = param.init_value;
 	}
 	
 	slider.onload = function () {

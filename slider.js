@@ -248,8 +248,6 @@ Slider.prototype.move = function (event) {
 
 Slider.prototype.runListeners = function(eventName) {
 	var listeners = this.listeners[eventName];
-	
-	console.log(listeners);
 
 	for (var i = 0; i < listeners.length; i++) {
 		var func = listeners[i]['func'];

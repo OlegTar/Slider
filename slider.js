@@ -232,7 +232,8 @@ Slider.prototype.move = function (event) {
 		
 		this.slider.style.left = new_x + 'px';
 
-		this.runListeners();	
+		this.runListeners('move');
+		
 		event.returnValue = false;
 
 		if (event.preventDefault) {
@@ -241,15 +242,19 @@ Slider.prototype.move = function (event) {
 		if (event.stopPropagation) {
 			event.stopPropagation();
 		}
-	}		
+	}
 }
 
 
-Slider.prototype.runListeners = function() {
-	for (var i = 0; i < this.listeners['move'].length; i++) {
-		var func = this.listeners['move'][i]['func'];
-		var args = this.listeners['move'][i]['args'];
-		var obj  = this.listeners['move'][i]['obj'];
+Slider.prototype.runListeners = function(eventName) {
+	var listeners = this.listeners[eventName];
+	
+	console.log(listeners);
+
+	for (var i = 0; i < listeners.length; i++) {
+		var func = listeners[i]['func'];
+		var args = listeners[i]['args'];
+		var obj  = listeners[i]['obj'];
 
 		var args_ = new Array();
 		args_.push(this.value);			

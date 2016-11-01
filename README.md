@@ -3,11 +3,14 @@ Javascript slider
 
 #Usages
 Quick start:
+Put folder "slider" into document root directory. 
+You need include only slider/slider.js file, the css file will be included automatically.
+
 ```Html
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script src="slider.js"></script>
+<script src="slider/slider.js"></script>
 <script>
 onload = function() {
   new Slider({
@@ -45,7 +48,7 @@ slider.addEventListener(eventName, function, parameter, thisObject)
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script src="slider.js"></script>
+<script src="slider/slider.js"></script>
 <script>
 onload = function() {
   var slider = new Slider({

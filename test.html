@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="slider/slider.js"></script>
+<script>
+onload = function() {
+  new Slider({
+      id : 'slider',//id of div for placing the slider
+      width : 100,//width of slider,
+      min_value: 0,
+      max_value: 100,
+      value_id : 'value',//id of input for putting value (optional)
+      init_value: 25//(initial value, optional)
+    });
+}
+</script>
+<body>
+<div id="slider"></div>
+<input type="text" id="value"/>
+</body>
+</html>
